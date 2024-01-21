@@ -1,6 +1,20 @@
 import React from 'react';
 import './Index.css'
 const Index = () => {
+    let categories = [
+    {
+        title:"Mens",
+        image:"images/mens.png"
+    },
+    {
+        title:"Womens",
+        image: "images/womens.png"
+    },
+    {
+        title:"Kids",
+        image: "images/kids.png"
+    }
+]
     return (
       <div className="banner-section-container">
         <div className="banner-container">
@@ -10,8 +24,11 @@ const Index = () => {
             </h1>
             <p>Shop by style , brand or items on sale</p>
             <div></div>
-            <div className='banner-search-container'>
-              <input className="banner-search-input" placeholder="Search ..." />
+            <div className="banner-search-container">
+              <input
+                className="banner-search-input"
+                placeholder="Find your perfect style"
+              />
               <svg
                 width="40"
                 height="40"
@@ -31,11 +48,25 @@ const Index = () => {
                   </clipPath>
                 </defs>
               </svg>
+              <button className="banner-search-btn">Search</button>
             </div>
           </div>
           <div>
             <img className="banner-image" src="images/banner-image.jpg" />
           </div>
+        </div>
+          <p className="cat-text">Categories</p>
+        <div className="home-container">
+          {categories.map((cat) => (
+            <div className="categories-card" key={cat.id}>
+              <p className="categories-title">{cat.title}</p>
+              <img
+                className='cat-image'
+                src={cat.image}
+                alt={cat.title} // add alt attribute for accessibility
+              />
+            </div>
+          ))}
         </div>
       </div>
     );

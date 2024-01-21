@@ -16,6 +16,7 @@ ul.navbar-section-one {
     display: flex;
     font-size: 12px;
     list-style-type: none;
+    text-align: center;
 }
 
 .navbar-section-one li {
