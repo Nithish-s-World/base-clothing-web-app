@@ -1,0 +1,30 @@
+.header.navbar-container {
+    display: flex;
+    padding: 10px;
+    font-size: 14px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+}
+
+.logo-container {
+    width: 40px;
+    height: 40px;
+}
+
+ul.navbar-section-one {
+    display: flex;
+    font-size: 12px;
+    list-style-type: none;
+}
+
+.navbar-section-one li {
+    width: 100px;
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.navbar-icons{
+    width: 30px;
+}
